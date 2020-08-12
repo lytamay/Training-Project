@@ -1,0 +1,15 @@
+a{
+    margin: 20px;
+    color: black;
+}
+
+.box{
+    background-color :white;
+    height: 60px;
+    border-bottom: 2px solid deepskyblue;
+}
+input{
+    /* width: 50px; */
+    height: 40px;
+    /* border-bottom: white 2px; */
+}

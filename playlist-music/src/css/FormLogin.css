@@ -1,0 +1,24 @@
+.boxFormLogin{
+    text-align: center;
+    width: 100  px;
+    /* height: 600px; */
+    color: white;
+    float: right;
+    margin-left: 25%;
+    background-color: teal;
+}
+.login{
+    text-align: center;
+    color: lavenderblush;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box{
+    background-color: darkturquoise;
+    width: 100%;
+    height: 500px;
+}
+
+.loginwithgoogle{
+    margin-top: 300;
+}

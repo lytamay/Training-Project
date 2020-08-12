@@ -1,0 +1,18 @@
+.navbarLogin{
+    background-color:#333;
+    text-align: center;
+}
+
+.nhachay{
+    margin-left: 3em;
+    padding: 12px;
+}
+
+.Login{
+    float: right; 
+    display: block;
+    margin-left: 76%;
+}
+.Login >p{
+    padding: 15px;
+}
