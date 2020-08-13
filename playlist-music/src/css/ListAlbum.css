@@ -1,0 +1,30 @@
+/* ul{
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0px;
+}
+
+.list-album{
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 10px;    
+}
+.list-album ul li{
+    width: 115px;
+    height: 215px;
+    float: left;
+    margin-right: 20px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+li{
+    position: absolute;
+    display: list-item;
+    list-style-type: none;
+    margin: 0px;
+
+} */

@@ -1,0 +1,59 @@
+a, a:hover, a:active, a:focus {
+    outline: 0;
+}
+
+.view-listen {
+    position: absolute;
+    color: #c7c7c7;
+    right: 0;
+    font-size: 12px;
+    background: url(https://stc-id.nixcdn.com/v11/images/bg_view_listen.png) left top;
+    padding: 0 5px 0 15px;
+    line-height: 24px;
+    display: block;
+}
+
+.icon-listen{
+    background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) 0px -202px no-repeat;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin: 8px 3px 0 0;
+}
+/* .rank{
+
+} */
+/* .iconPlay{
+    position: absolute;
+    z-index:1;
+    top: 50%;
+    left: 50%;
+    margin: -24px 0 0 -24px;
+    width: 48px;
+    height: 48px;
+    display: none;
+    background-color: brown;
+    background: url(https://stc-id.nixcdn.com/v11/images/icon.png) left -28px no-repeat;
+    opacity: 0;
+    visibility: visible;
+} */
+
+.avata{
+    /* z-index: 1; */
+    /* position: absolute; */
+    /* overflow: hidden; */
+    /* width: 128px; */
+    /* height: 128px; */
+}
+
+.info-album h3{
+    float: left;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-size: 14px; */
+}
+.info-album h4{
+    float: left;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+}

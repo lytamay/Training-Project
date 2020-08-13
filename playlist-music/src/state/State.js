@@ -5,4 +5,9 @@ const logInState = atom({
     default : []
 })
 
-export {logInState};
+const getAlbumApiState = atom({
+    key:'getAlbumApiState',
+    default : []
+})
+
+export {logInState, getAlbumApiState};

@@ -1,22 +1,7 @@
-import React from 'react';
-import { useEffect } from 'react';
 import axios from 'axios';
 
-function GetListmusicAPI(props) {
+const getListmusicAPIBySearch = () =>{
+    return(axios.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?redirect_uri=http%253A%252F%252Fguardian.mashape.com%252Fcallback&q=eminem&index=25'))
+} 
 
-
-    useEffect(
-        axios.get('https://shazam.p.rapidapi.com/search')
-        .then(res => {
-            const data = res.data
-        })
-    
-    )
-    return (
-        <div>
-            
-        </div>
-    );
-}
-
-export default GetListmusicAPI;
+export {getListmusicAPIBySearch};
