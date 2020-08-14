@@ -1,15 +1,18 @@
-a{
-    margin: 20px;
-    color: black;
+.navbar{
+    font: 14px;
+    padding: 12px;
+    font-weight: 14px;
+    border-bottom:5px solid white;
 }
 
-.box{
-    background-color :white;
-    height: 60px;
-    border-bottom: 2px solid deepskyblue;
+a{
+    margin: 20px;
 }
+
 input{
-    /* width: 50px; */
-    height: 40px;
-    /* border-bottom: white 2px; */
+    float:right;
+    outline: none;
+    border-style: outset;
+    padding: 0.8vh;
+    
 }

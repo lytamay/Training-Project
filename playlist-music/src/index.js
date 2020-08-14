@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { RecoilRoot } from 'recoil';
+import 'antd/dist/antd.css';
+
 
 ReactDOM.render(
   <RecoilRoot>

@@ -3,24 +3,15 @@ import Album from './Album';
 import '../../css/ListAlbum.css';
 import { useRecoilState } from 'recoil';
 import {getAlbumApiState} from '../../state/State';
+import { Row } from 'antd';
 
 function ListAlbum(props) {
-    const [album , setAlbum ] = useRecoilState(getAlbumApiState)
-    const Album = () =>{
-        const show = album.map((album) => {
-            return (
-            <li key={album.id}><Album/> </li>
-            )
-        })
-        return show
-    }
-    console.log(album)
+    const listAlbum = props.album
+
     return (
-        <div className='list-album container-fluid'>
-            <ul>
-                {Album()}
-            </ul>
-        </div>
+        <Row gutter={10} className='list-album'>
+            {listAlbum.map((album, index) => <Album key={album.id} album={album} />)}
+        </Row>
     );
 }
 

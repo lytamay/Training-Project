@@ -20,40 +20,19 @@ a, a:hover, a:active, a:focus {
     float: left;
     margin: 8px 3px 0 0;
 }
-/* .rank{
 
-} */
-/* .iconPlay{
-    position: absolute;
-    z-index:1;
-    top: 50%;
-    left: 50%;
-    margin: -24px 0 0 -24px;
-    width: 48px;
-    height: 48px;
-    display: none;
-    background-color: brown;
-    background: url(https://stc-id.nixcdn.com/v11/images/icon.png) left -28px no-repeat;
-    opacity: 0;
-    visibility: visible;
-} */
-
-.avata{
-    /* z-index: 1; */
-    /* position: absolute; */
-    /* overflow: hidden; */
-    /* width: 128px; */
-    /* height: 128px; */
+li{
+    list-style-type: none;
 }
-
-.info-album h3{
-    float: left;
-    width: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* font-size: 14px; */
+.ant-card-body{
+    padding: 4px !important
 }
-.info-album h4{
-    float: left;
+.ant-card-meta-detail > div:not(:last-child) {
+    margin-bottom: 0px !important;
+}
+.ant-card{
+    margin-bottom: 12px !important;
+}
+img{
     width: 100%;
-    font-family:Arial, Helvetica, sans-serif;
 }

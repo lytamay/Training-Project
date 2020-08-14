@@ -1,32 +1,33 @@
 import React from 'react';
 import '../css/Slidebar.css';
 import SlidebarItem from './SlideBarItem';
+import { Carousel } from 'antd';
 
 
 function Slidebar(props) {
+    const contentStyle = {
+        height: '160px',
+        color: '#fff',
+        lineHeight: '160px',
+        textAlign: 'center',
+        background: '#364d79',
+    };
     return (
-        <div className='container-fluid'>
-            <div className='row'>
-                <div>
-                    <img className='sildbarImg' src="https://avatar-nct.nixcdn.com/slideshow/2020/08/11/d/0/f/3/1597137936184_org.jpg" alt=""/>
-                </div>
-                <div className ='row '>
-                    <div className='col-3'>
-                        <SlidebarItem className='slideItem'/>
-                    </div>
-                    <div className='col-3'>
-                        <SlidebarItem className='slideItem'/>
-                    </div>
-                    <div className='col-3 '>
-                        <SlidebarItem className='slideItem'/>
-                    </div>
-                    <div className='col-3 '>
-                        <SlidebarItem className='slideItem'/>
-                    </div>
-                </div>
+        <Carousel autoplay>
+            <div>
+                <SlidebarItem/>
             </div>
-        </div>
-    );
+            <div>
+                <SlidebarItem/>
+            </div>
+            <div>
+                <SlidebarItem/>
+            </div>
+            <div>
+                <SlidebarItem/>
+            </div>
+        </Carousel>
+    )
 }
 
 export default Slidebar;
