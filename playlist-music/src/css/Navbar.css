@@ -3,10 +3,13 @@
     padding: 12px;
     font-weight: 14px;
     border-bottom:5px solid white;
+    background: #0404B4;
 }
 
 a{
     margin: 20px;
+    outline: none;
+    color: white !important;
 }
 
 input{

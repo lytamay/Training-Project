@@ -1,18 +1,14 @@
-import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import Slidebar from '../components/Slidebar';
-import '../css/Home.css'
+import { Layout, Row, Col } from 'antd';
+import Theme from '../components/chung/Theme';
 import ListAlbum from '../components/chung/ListAlbum';
 import { useRecoilState } from 'recoil';
 import {getAlbumApiState} from '../state/State';
+import React, { useEffect } from 'react';
 import {getListmusicAPIBySearch} from '../API/GetListmusicAPI';
-import { Layout, Row, Col } from 'antd';
-import 'antd/dist/antd.css';
-import Theme from '../components/chung/Theme';
-import Pages from '../components/chung/Pages'
-import Footer from '../components/Footer';
+import ChudeHot from '../components/ChudeHot';
 
-function Home(props) {
+function Baihat(props) {
     const [albumState, setAlbumState] = useRecoilState(getAlbumApiState)
 
     useEffect( () =>{
@@ -22,28 +18,23 @@ function Home(props) {
             setAlbumState(data)
         }).catch (err => console.log(err))
     },[])
-
-
     return (
         <Layout>
             <Navbar/>
             <Row className="content">
-                <Col className="group-content-left" offset={1} span={17}>
-                    <Slidebar album={albumState}/>
-                    <Theme theme='Nghe gi hom nay'/>
-                    <ListAlbum span='4' album={albumState}/>
-                    <Theme theme='Moi phat hanh'/>
-                    <ListAlbum span='4' album={albumState}/>
-                    <Theme theme='Nhac hot nhat'/>
+            <Col className="group-content-left" offset={1} span={17}>
+                    <Theme fontzize='40px' color='blue' theme='Nghe gi hom nay'/>
                     <ListAlbum span='4' album={albumState}/>
                 </Col>
                 <Col className ="group-content-right" offset={1} span={5}>
-                    <p>sasas</p>
+                    <Theme fontzize='20px' color='black' theme='Ca si hot'/>
+                    
+                    <Theme fontzize='20px' color='black' theme='Chu de hot'/>
+                    <ChudeHot theme="Nhac Han" background='blue'/>
                 </Col>
             </Row>
-            <Footer/>
         </Layout>
     );
 }
 
-export default Home;
+export default Baihat;

@@ -1,6 +1,6 @@
 
-SlidebarItem{
-    height: '160px';
+.slick-track{
+    height: 350px !important;
     color: '#fff';
     lineHeight: '160px';
     textAlign: 'center';

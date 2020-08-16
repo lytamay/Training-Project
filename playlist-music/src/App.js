@@ -3,6 +3,7 @@ import './App.css';
 import Login from './pages/Login';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
+import Baihat from './pages/Baihat';
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         <Route path ='/login'>
           <Login/>
         </Route>
-        <Route path ='/'>
-          <Home/>
+        <Route exact path="/" render={props=><Home {...props} />}/>
+        <Route path ='/baihat'>
+          <Baihat/>
         </Route>
       </Switch>
     </Router>

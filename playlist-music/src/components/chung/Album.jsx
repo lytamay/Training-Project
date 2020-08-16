@@ -6,8 +6,9 @@ const { Meta } = Card;
 
 function Album(props) {
     const album = props.album
+    const span=props.span
     return (  
-        <Col span={4}>
+        <Col span={span}>
             <Card  hoverable  cover={<img  alt={album.title} src={album.album.cover} />}>
                 <Meta title={album.title} description={album.artist.name}/> 
             </Card>

@@ -3,29 +3,22 @@ import '../css/Slidebar.css';
 import SlidebarItem from './SlideBarItem';
 import { Carousel } from 'antd';
 
-
 function Slidebar(props) {
-    const contentStyle = {
-        height: '160px',
-        color: '#fff',
-        lineHeight: '160px',
-        textAlign: 'center',
-        background: '#364d79',
-    };
+    const album = props.album
     return (
         <Carousel autoplay>
-            <div>
-                <SlidebarItem/>
+            {album.map((slideBarItem) =>
+                <div>
+                   <SlidebarItem key={slideBarItem.id} item={slideBarItem}/>
+                </div>
+            )} 
+              
+            {/* <div>
+                <SlidebarItem style={contentStyle}/>
             </div>
             <div>
-                <SlidebarItem/>
-            </div>
-            <div>
-                <SlidebarItem/>
-            </div>
-            <div>
-                <SlidebarItem/>
-            </div>
+                <SlidebarItem style={contentStyle}/>    
+            </div>     */}
         </Carousel>
     )
 }
