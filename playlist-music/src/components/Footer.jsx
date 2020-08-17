@@ -5,7 +5,7 @@ import '../css/Footer.css';
 
 function Footer(props) {
     return (
-        <footer style={{marginTop:12, background: '#013ADF', color: "white", padding: 20}}>
+        <footer style={{marginTop:12, background: '#138585', color: "white", padding: 20}}>
             <Row>
                 <Col span={20}>
                     <span className='adress'>

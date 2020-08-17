@@ -3,10 +3,12 @@
     padding: 12px;
     font-weight: 14px;
     border-bottom:5px solid white;
-    background: #0404B4;
+    background:#138585;
+    align-content: center;
+    align-items: center;
 }
 
-a{
+.navbar a{
     margin: 20px;
     outline: none;
     color: white !important;

@@ -36,3 +36,9 @@ li{
 img{
     width: 100%;
 }
+
+.cart, a{
+    outline: 0px;
+    font-size: 14px;
+    color: black !important;
+}

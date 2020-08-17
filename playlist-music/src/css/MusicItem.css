@@ -1,0 +1,25 @@
+.box-music-left a{
+    outline: none;
+    margin: 0px;
+    color: black !important;
+}
+
+.box-music{
+    height: 110px;
+    text-align: left;
+    border-top: 1px solid gray;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    align-content: center;
+    align-items: center;
+}
+
+.box-music img{
+    height: 100px;
+}
+
+.box-music-right{
+    float: right;
+}
+
