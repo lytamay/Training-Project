@@ -9,14 +9,16 @@ import InforDetailMusic from '../components/InforDetailMusic';
 import PlayMusic from '../components/PlayMusic';
 import { getTrackByTrack} from '../API/GetListmusicAPI';
 import { useRecoilState } from 'recoil';
-import {gettrackState} from '../state/State'
+import {gettrackState, getTrackListAlbumState, getTrackListArtistState} from '../state/State'
+import ListAlbum from '../components/chung/ListAlbum';
 
 function DetailMusic(props) {
     const [trackState , setTrackState] = useRecoilState(gettrackState)
+    const [trackListAlbumState, setTrackListAlbumState] = useRecoilState(getTrackListAlbumState)
+    const [trackListArtistState, setTrackListArtistState] = useRecoilState(getTrackListArtistState)
 
     const theme=`kang dainel`
     const idMusic=props.match.params.id
-    
     useEffect(() => {
         getTrackByTrack(idMusic)
         .then((res) => {
@@ -28,7 +30,15 @@ function DetailMusic(props) {
         })
     },[])
 
+    if(!trackState.album){
+        return null
+    }
+    
     const ranh = `Ranh:${trackState.rank}`
+
+    const trackListAlbum = trackState.album.tracklist
+    console.log(trackState.album.tracklist);
+    
     return (
         <Layout>
             <Navbar/>
@@ -36,7 +46,7 @@ function DetailMusic(props) {
                 <Col offset={1} span={17}>
                     <Row>
                         <Col span={18}>
-                        <   Theme color='Black' fontzize='30px' theme={theme} />
+                        <   Theme color='Black' fontzize='30px' theme={trackState.title} />
                         </Col>
                         <Col span={6}>
                             <Theme color='gray' fontzize='30px' theme={ranh} />
@@ -49,7 +59,9 @@ function DetailMusic(props) {
                     <div style={{ border: '1px solid gray', paddingTop: '14px' , paddingBottom: '14px' , paddingLeft: '10px'}}>
                         <InforDetailMusic key={trackState.id} track={trackState}/>
                     </div>
-                    <Theme color='Black' fontzize='30px' theme='Bai hat khac' />
+                    <Theme color='Black' fontzize='30px' theme='Bai hat trong album' />
+                    {/* <ListAlbum span='4' album={trackState.album.tracklist}/> */}
+                    <Theme color='Black' fontzize='30px' theme='Bai hat cua ca si' />
                 </Col>
                 <Col offset={1} span={5}>
                     <p>asas</p>

@@ -70,7 +70,24 @@ const getTrackByInfos= () => {
     })
 }
 
-export {getTrackBySearch,  getTrackByTrack,
+const getTrackByTrackListAlbum = () => {
+    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/album/677684", {
+        headers: {
+            "x-rapidapi-host" : host,
+            "x-rapidapi-key" : key
+        }
+    })
+}
+
+const getTrackByTrackListArtist = () => {
+    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/album/677684", {
+        headers: {
+            "x-rapidapi-host" : host,
+            "x-rapidapi-key" : key
+        }
+    })
+}
+export {getTrackBySearch,  getTrackByTrack, getTrackByTrackListAlbum, getTrackByTrackListArtist,
     getTrackByArtist, getTrackByAlbum, getTrackByEditorial,
     getTrackByPlaylist,getTrackByRadio, getTrackByInfos };
 

@@ -20,4 +20,16 @@ const getartistState =atom({
     default : []
 })
 
-export {logInState, getAlbumApiState, gettrackState, getartistState};
+const getTrackListAlbumState =atom({
+    key: "getTrackListAlbum",
+    default: []
+})
+
+const getTrackListArtistState =atom({
+    key: "getTrackListArtist",
+    default: []
+})
+
+
+export {logInState, getAlbumApiState, gettrackState,
+     getartistState, getTrackListAlbumState, getTrackListArtistState};
