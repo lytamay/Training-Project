@@ -5,7 +5,7 @@ import '../css/Home.css'
 import ListAlbum from '../components/chung/ListAlbum';
 import { useRecoilState } from 'recoil';
 import {getAlbumApiState} from '../state/State';
-import {getListmusicAPIBySearch} from '../API/GetListmusicAPI';
+import {getTrackBySearch} from '../API/GetListmusicAPI';
 import { Layout, Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import Theme from '../components/chung/Theme';
@@ -16,14 +16,13 @@ function Home(props) {
     const [albumState, setAlbumState] = useRecoilState(getAlbumApiState)
 
     useEffect( () =>{
-        getListmusicAPIBySearch()
+        getTrackBySearch()
         .then( res => {
             const data = res.data.data
             setAlbumState(data)
         }).catch (err => console.log(err))
     },[])
-
-
+    
     return (
         <Layout>
             <Navbar/>

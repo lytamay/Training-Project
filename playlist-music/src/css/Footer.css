@@ -1,5 +1,5 @@
 .adress a{
-    color: white;
+color: white !important;
     outline: 0;
     margin-left: 20px;
     align-content: center;

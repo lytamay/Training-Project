@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col,Button } from 'antd';
-import { PoweroffOutlined } from '@ant-design/icons';
+import { Row, Col} from 'antd';
 import '../css/Footer.css';
 
 function Footer(props) {

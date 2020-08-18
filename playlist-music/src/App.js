@@ -18,8 +18,7 @@ function App() {
         <Route path ='/baihat'>
           <Baihat/>
         </Route>
-        <Route path ='/detail-music'>
-          <DetailMusic/>
+        <Route path ='/detail-music/:id' render={props => <DetailMusic {...props}/>}>
         </Route>
         <Route path ='/thong-tin-bai-hat'>
           <Singer/>

@@ -5,7 +5,7 @@ import ListAlbum from '../components/chung/ListAlbum';
 import { useRecoilState } from 'recoil';
 import {getAlbumApiState} from '../state/State';
 import React, { useEffect } from 'react';
-import {getListmusicAPIBySearch} from '../API/GetListmusicAPI';
+import {getTrackBySearch} from '../API/GetListmusicAPI';
 import ChudeHot from '../components/ChudeHot';
 import Footer from '../components/Footer';
 import { Tabs } from 'antd';
@@ -18,7 +18,7 @@ function Baihat(props) {
     const [albumState, setAlbumState] = useRecoilState(getAlbumApiState)
 
     useEffect( () =>{
-        getListmusicAPIBySearch()
+        getTrackBySearch()
         .then( res => {
             const data = res.data.data
             setAlbumState(data)

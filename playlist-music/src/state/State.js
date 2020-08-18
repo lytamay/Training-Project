@@ -10,4 +10,14 @@ const getAlbumApiState = atom({
     default : []
 })
 
-export {logInState, getAlbumApiState};
+const gettrackState = atom({
+    key: 'trackState',
+    default:[]
+})
+
+const getartistState =atom({
+    key : 'artistState',
+    default : []
+})
+
+export {logInState, getAlbumApiState, gettrackState, getartistState};

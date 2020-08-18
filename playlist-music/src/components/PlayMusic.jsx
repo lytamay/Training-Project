@@ -1,21 +1,26 @@
 import React from 'react';
 import { Row, Col, Layout } from 'antd';
 import '../css/PlayMusic.css'
-import {MoreOutlined} from '@ant-design/icons';
 
 function PlayMusic(props) {
+    const track = props.track
+    if (!track.album) {
+        return null
+    }
+    const {title,cover_xl} = track.album
+
     return (
         <Layout className='box-playList'>
             <Row className='box-playList-top'>
                 <Col span={7}>
                     <div>
-                        <img src="https://avatar-nct.nixcdn.com/playlist/2015/05/17/f/d/7/c/1431859486138.jpg" alt=""/>
+                        <img src={cover_xl} alt={title}/>
                     </div>
                 </Col>
                 <Col span={12} offset={5} >
                     <div>
                         <div className='smal-img'>
-                            <img shape="circle" src="https://avatar-nct.nixcdn.com/playlist/2015/05/17/f/d/7/c/1431859486138.jpg" alt=""/>
+                            <img shape="circle" src={cover_xl} alt={title}/>
                         </div>
                         <div>
 
@@ -34,7 +39,7 @@ function PlayMusic(props) {
             </Row>
             <Row>
                 <audio className='playmusic' controls loop>
-                    <source src='https://cdns-preview-7.dzcdn.net/stream/c-70df68f339e46dea6329efa2867495fe-15.mp3'/>
+                    <source src={track.preview}/>
                 </audio>
             </Row>
         </Layout>

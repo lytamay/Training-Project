@@ -1,16 +1,15 @@
 import React from 'react';
 import '../../css/Album.css'
 import { Card, Col } from 'antd';
-import { Link } from 'react-router-dom';
 
-const { Meta } = Card;
-
-function    Album(props) {
+function Album(props) {
     const album = props.album
     const span=props.span
+    const link = `/detail-music/${album.id}`
+    
     return (  
         <Col span={span}>
-            <Card  hoverable  cover={<img  alt={album.title} src={album.album.cover}  className='cart'/>}>
+            <Card  hoverable  cover={<a href={link}><img  alt={album.title} src={album.album.cover}  className='cart'/></a>}>
                 <div>
                     <a href="/thong-tin-bai-hat">{album.title}</a>
                 </div>

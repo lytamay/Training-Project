@@ -3,18 +3,25 @@ import '../css/InforCasy.css'
 import { Row, Col } from 'antd';
 
 function InforCasy(props) {
+    const track=props.track
+
+    if(!track.artist){
+        return null
+    }
+    const {picture_xl} = track.artist
+
     return (
         <Row className='infor-ca-sy'>
             <Col span={props.sizeanh}>
-                <a href="#"><img src="https://avatar-nct.nixcdn.com/song/2020/08/13/6/3/1/8/1597293866868.jpg" alt=""/></a>
+                <a href="#"><img src={picture_xl} alt={track.title_short}/></a>
             </Col>
             <Col span={props.sizetext} offset={1}>
                 <h3 style={{fontSize: props.fontSizeTenBaihat}}>
-                    <a href="#">Ten bai hat</a>
+                    <a href="/thong-tin-bai-hat">{track.title}</a>
                 </h3>
                 <span>
-                    <a style={{fontSize: props.fontSizeTenCasy}} href="#">Ten ca sy, </a>
-                    <a style={{fontSize: props.fontSizeTenCasy}} href="#">Ten tac gia</a>
+                    <a style={{fontSize: props.fontSizeTenCasy}} href="/thong-tin-ca-si">{track.artist.name} </a>
+                    {/* <a style={{fontSize: props.fontSizeTenCasy}} href="/">Ten tac gia</a> */}
                 </span>
             </Col>
         </Row>
