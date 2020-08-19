@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Baihat from './pages/Baihat';
 import DetailMusic from './pages/DetailMusic';
 import Singer from './pages/Singer';
+import InforPersonal from './pages/InforPersonal';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Baihat/>
         </Route>
         <Route path ='/detail-music/:id' render={props => <DetailMusic {...props}/>}>
+        </Route>
+        <Route path ='/detail-music/:name' render={props => <InforPersonal {...props}/>}>
         </Route>
         <Route path ='/thong-tin-bai-hat'>
           <Singer/>

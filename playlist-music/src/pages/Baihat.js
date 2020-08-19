@@ -1,29 +1,38 @@
 import Navbar from '../components/Navbar';
 import { Layout, Row, Col } from 'antd';
 import Theme from '../components/chung/Theme';
-import ListAlbum from '../components/chung/ListAlbum';
 import { useRecoilState } from 'recoil';
-import {getAlbumApiState} from '../state/State';
-import React, { useEffect } from 'react';
-import {getTrackBySearch} from '../API/GetListmusicAPI';
+import React, { useEffect, useState } from 'react';
 import ChudeHot from '../components/ChudeHot';
 import Footer from '../components/Footer';
 import { Tabs } from 'antd';
-import Album from '../components/chung/Album';
 import ListMusic from '../components/ListMusic';
+import { getTrackByAlbum} from '../API/GetListmusicAPI';
+import {getTrackListArtistState} from '../state/State'
 
 const { TabPane } = Tabs;
 
 function Baihat(props) {
-    const [albumState, setAlbumState] = useRecoilState(getAlbumApiState)
+    const [trackArtistState , setTrackArtistState] = useRecoilState(getTrackListArtistState)
+    const [trackListState, setTrackListState] = useState([])
 
     useEffect( () =>{
-        getTrackBySearch()
+        getTrackByAlbum()
         .then( res => {
-            const data = res.data.data
-            setAlbumState(data)
+            const data = res.data
+            setTrackArtistState(data)
         }).catch (err => console.log(err))
     },[])
+
+    if(!trackArtistState.tracks){
+        return null
+    }
+
+    const tam = trackArtistState.tracks.data;
+    // setTrackArtistState(tam)
+    // console.log(trackListState);
+    console.log(tam);
+
     return (
         <Layout>
             <Navbar/>
@@ -32,11 +41,11 @@ function Baihat(props) {
                     <Tabs defaultActiveKey="1">
                         <TabPane tab="Hot music" key="1">
                             <Theme color='red' fontzize='40px' theme='Nhac hot nhat'/>
-                            <ListMusic/>
+                            {/* <ListMusic track={trackArtistState} /> */}
                         </TabPane>
                         <TabPane tab="New music" key="2">
                             <Theme color='green' fontzize='40px' theme='Nhac moi nhat'/>
-                            <ListMusic/>
+                            {/* <ListMusic track={trackArtistState}/> */}
                         </TabPane>
                     </Tabs>
                 </Col>

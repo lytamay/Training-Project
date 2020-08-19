@@ -17,7 +17,7 @@ const  getTrackByTrack = (id) => {
 }
 
 const getTrackByArtist = () => {
-    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/artist/%7Bid%7D", {
+    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/artist/67239342", {
         headers: {
             "x-rapidapi-host" : host,
             "x-rapidapi-key" : key
@@ -26,7 +26,7 @@ const getTrackByArtist = () => {
 }
 
 const getTrackByAlbum = () => {
-    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/album/677684", {
+    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/album/119606", {
         headers: {
             "x-rapidapi-host" : host,
             "x-rapidapi-key" : key
@@ -70,8 +70,8 @@ const getTrackByInfos= () => {
     })
 }
 
-const getTrackByTrackListAlbum = () => {
-    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/album/677684", {
+const getTrackByTrackListAlbum = (track) => {
+    return axios.get('https://cors-anywhere.herokuapp.com/' + track, {
         headers: {
             "x-rapidapi-host" : host,
             "x-rapidapi-key" : key
@@ -79,15 +79,17 @@ const getTrackByTrackListAlbum = () => {
     })
 }
 
-const getTrackByTrackListArtist = () => {
-    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/album/677684", {
+const getTrackByComment= () => {
+    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/comment/67239342", {
         headers: {
             "x-rapidapi-host" : host,
             "x-rapidapi-key" : key
         }
     })
 }
-export {getTrackBySearch,  getTrackByTrack, getTrackByTrackListAlbum, getTrackByTrackListArtist,
+
+
+export {getTrackBySearch,  getTrackByTrack, getTrackByTrackListAlbum,getTrackByComment,
     getTrackByArtist, getTrackByAlbum, getTrackByEditorial,
     getTrackByPlaylist,getTrackByRadio, getTrackByInfos };
 

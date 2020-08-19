@@ -13,7 +13,7 @@ function InforCasy(props) {
     return (
         <Row className='infor-ca-sy'>
             <Col span={props.sizeanh}>
-                <a href="#"><img src={picture_xl} alt={track.title_short}/></a>
+                <img src={picture_xl} alt={track.title_short}/>
             </Col>
             <Col span={props.sizetext} offset={1}>
                 <h3 style={{fontSize: props.fontSizeTenBaihat}}>
@@ -21,7 +21,6 @@ function InforCasy(props) {
                 </h3>
                 <span>
                     <a style={{fontSize: props.fontSizeTenCasy}} href="/thong-tin-ca-si">{track.artist.name} </a>
-                    {/* <a style={{fontSize: props.fontSizeTenCasy}} href="/">Ten tac gia</a> */}
                 </span>
             </Col>
         </Row>

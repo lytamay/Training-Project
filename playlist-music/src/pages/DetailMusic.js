@@ -9,16 +9,13 @@ import InforDetailMusic from '../components/InforDetailMusic';
 import PlayMusic from '../components/PlayMusic';
 import { getTrackByTrack} from '../API/GetListmusicAPI';
 import { useRecoilState } from 'recoil';
-import {gettrackState, getTrackListAlbumState, getTrackListArtistState} from '../state/State'
-import ListAlbum from '../components/chung/ListAlbum';
+import {gettrackState} from '../state/State'
+import BoxMusic from '../components/BoxMusic';
 
 function DetailMusic(props) {
     const [trackState , setTrackState] = useRecoilState(gettrackState)
-    const [trackListAlbumState, setTrackListAlbumState] = useRecoilState(getTrackListAlbumState)
-    const [trackListArtistState, setTrackListArtistState] = useRecoilState(getTrackListArtistState)
-
-    const theme=`kang dainel`
     const idMusic=props.match.params.id
+
     useEffect(() => {
         getTrackByTrack(idMusic)
         .then((res) => {
@@ -29,15 +26,12 @@ function DetailMusic(props) {
             console.error(error)
         })
     },[])
-
     if(!trackState.album){
         return null
     }
-    
     const ranh = `Ranh:${trackState.rank}`
-
-    const trackListAlbum = trackState.album.tracklist
-    console.log(trackState.album.tracklist);
+    const trackListAlbum = trackState.artist.tracklist
+    const trackArtistAlbum = trackState.album.tracklist
     
     return (
         <Layout>
@@ -60,8 +54,9 @@ function DetailMusic(props) {
                         <InforDetailMusic key={trackState.id} track={trackState}/>
                     </div>
                     <Theme color='Black' fontzize='30px' theme='Bai hat trong album' />
-                    {/* <ListAlbum span='4' album={trackState.album.tracklist}/> */}
+                    <BoxMusic trackList={trackListAlbum}/>
                     <Theme color='Black' fontzize='30px' theme='Bai hat cua ca si' />
+                    {/* <BoxMusic trackList={trackListAlbum}/> */}
                 </Col>
                 <Col offset={1} span={5}>
                     <p>asas</p>

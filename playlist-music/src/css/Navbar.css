@@ -15,9 +15,8 @@
 }
 
 input{
-    float:right;
-    outline: none;
     border-style: outset;
     padding: 0.8vh;
-    
+    outline: none;
+    border: none;
 }
