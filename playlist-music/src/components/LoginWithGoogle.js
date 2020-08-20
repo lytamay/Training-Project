@@ -25,7 +25,7 @@ function LoginWithGoogle(props) {
             localStorage.setItem('user', JSON.stringify(tam))
         }
     }
-    console.log(logInState);
+    console.log(setInforPersonState);
     return (
         <GoogleLogin className = 'googleLogin'
             clientId = '553440884931-578l4q92h5u3rds8nemkvnend0onh63k.apps.googleusercontent.com'

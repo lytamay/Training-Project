@@ -5,13 +5,14 @@ import Footer from '../components/Footer';
 import {UserOutlined, VideoCameraOutlined, UploadOutlined} from '@ant-design/icons';
 import Faverist from './Faverist';
 import Login from './Login';
+import SearchAll from './SearchAll';
 
 const { Sider, Content } = Layout;
 
-function InforPersonal(props) {
+function Search(props) {
+    const search = props.match.params.name
     const [showFaveristState , setShowFaveristState] = useState(false)
     const [showUploadState , setShowUploadState] = useState(false)
-
     const handelShowFaveristState = () => {
         setShowUploadState(false)
         setShowFaveristState(true)
@@ -28,19 +29,22 @@ function InforPersonal(props) {
                     <div className="logo" />
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1" icon={<UserOutlined />}>
-                            Nguyen ngoc
+                            Tat Ca
                         </Menu.Item>
                         <Menu.Item key="2" onClick={handelShowFaveristState} icon={<VideoCameraOutlined />}>
-                            Danh sach yeu thich
+                            Bai Hat
                         </Menu.Item>
                         <Menu.Item key="3" onClick={handelShowUploadState} icon={<UploadOutlined />}>
-                            Tai len
+                            Nghe si
+                        </Menu.Item>
+                        <Menu.Item key="3" onClick={handelShowUploadState} icon={<UploadOutlined />}>
+                            MV
                         </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout className="site-layout">
                 <Content className="site-layout-background" style={{margin: '24px 16px', padding: 24, minHeight: 280,}}>
-                    {showFaveristState && <Faverist/>}
+                    {showFaveristState && <SearchAll search={search}/>}
                     {showUploadState && <Login/>}
                 </Content>
             </Layout>
@@ -50,4 +54,4 @@ function InforPersonal(props) {
     );
 }
 
-export default InforPersonal;
+export default Search;

@@ -1,25 +1,23 @@
 import React from 'react';
 import  '../css/FormLogin.css'
 import LoginWithGoogle from '../components/LoginWithGoogle'
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 import { useRecoilState } from 'recoil';
 import { getLoginState, getVisibleState } from '../state/State';
 
-function FormLogin(props) {
+
+function FormLogout(props) {
     const [login , setLogin] = useRecoilState(getLoginState)
     const [visible, setVisible] = useRecoilState(getVisibleState)
+    // const [visibleOut, setVisibleOut] = useRecoilState(getVisibleLogoutState)
 
     const handelCancel = () =>{
         setVisible(false)
     }
     const handelOk = () =>{
+        setLogin(false)
         setVisible(false)
     }
-    const handelLogin =() =>{
-        setVisible(false)
-        setLogin(true)
-    }
-    
     return (
         <Modal
             width='600px'
@@ -28,10 +26,9 @@ function FormLogin(props) {
             onCancel={handelCancel}
             onOk={handelOk}
         >
-            <h3 style={{marginLeft: '47px'}}>Dang nhap bang tai khoan google</h3>
-            <p onClick={handelLogin} style={{marginLeft: "178px"}}><LoginWithGoogle className='loginwithgoogle'/></p>
+            <h3 style={{marginLeft: '47px'}}>Ban chac chan muon dang nhap</h3>
         </Modal>
     );
 }
 
-export default FormLogin;
+export default FormLogout;

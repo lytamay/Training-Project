@@ -6,6 +6,9 @@ const key = "9fd6c939aamsh5f72768d77a1559p1dd2d7jsnf23f80d8315a"
 const getTrackBySearch = () =>{
     return(axios.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?redirect_uri=http%253A%252F%252Fguardian.mashape.com%252Fcallback&q=eminem&index=25'))
 } 
+const getTrackBySearchAll = (search) =>{
+    return(axios.get(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?redirect_uri=http%253A%252F%252Fguardian.mashape.com%252Fcallback&q=${search}&index=25`))
+} 
 
 const  getTrackByTrack = (id) => {
     return axios.get(`https://deezerdevs-deezer.p.rapidapi.com/track/`+ id, {
@@ -90,6 +93,6 @@ const getTrackByComment= () => {
 
 
 export {getTrackBySearch,  getTrackByTrack, getTrackByTrackListAlbum,getTrackByComment,
-    getTrackByArtist, getTrackByAlbum, getTrackByEditorial,
+    getTrackByArtist, getTrackByAlbum, getTrackByEditorial,getTrackBySearchAll,
     getTrackByPlaylist,getTrackByRadio, getTrackByInfos };
 

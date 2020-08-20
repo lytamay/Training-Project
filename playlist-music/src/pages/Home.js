@@ -22,7 +22,6 @@ function Home(props) {
             setAlbumState(data)
         }).catch (err => console.log(err))
     },[])
-    
     return (
         <Layout>
             <Navbar/>

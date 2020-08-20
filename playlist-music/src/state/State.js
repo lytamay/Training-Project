@@ -45,5 +45,16 @@ const inforPersonState = atom({
     default: {}
 })
 
-export {logInState, getAlbumApiState, gettrackState,getLoginState, getVisibleState,
+const getVisibleLogoutState = ({
+    key: 'getVisibleLogoutState',
+    default: false
+})
+
+const getSearchAllState = atom({
+    key: 'getSearchState',
+    default: ''
+})
+
+export {logInState, getAlbumApiState, gettrackState,getLoginState,
+     getVisibleState,getSearchAllState,getVisibleLogoutState,
      getartistState, getTrackListAlbumState, getTrackListArtistState, inforPersonState};
