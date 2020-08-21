@@ -1,23 +1,20 @@
-import React, { useEffect } from 'react';
-import { useRecoilState } from 'recoil';
-import { getSearchAllState } from '../state/State';
-import { getTrackBySearchAll} from '../API/GetListmusicAPI';
+import React from 'react';
+import { Layout } from 'antd';
+import ListAlbum from '../components/chung/ListAlbum';
+import BoxContent from '../components/chung/BoxContent';
 
 function SearchAll(props) {
     const search = props.search
-    const [searchAll, setSearchAll] = useRecoilState(getSearchAllState)
-
-    useEffect(()=>{
-        getTrackBySearchAll(search).then( res =>{
-            const data = res.data.data
-            setSearchAll(data)
-        }).catch(err => 'khong co du lieu')
-    },[search])
+    const show = () =>{
+        if(search.length === 0) return <BoxContent  boxWidth ='100%' boxHeight = '300px' boxText='Khong co du lieu' boxColor='#51258f' colorText='white'/>
+        else {
+            return <ListAlbum span='4' album={search}/>
+        }
+    }
     return (
-        <div>
-           
-           d
-        </div>
+        <Layout>
+            {show()}
+        </Layout>
     );
 }
 

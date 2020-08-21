@@ -4,10 +4,15 @@ const host = "deezerdevs-deezer.p.rapidapi.com"
 const key = "9fd6c939aamsh5f72768d77a1559p1dd2d7jsnf23f80d8315a"
 
 const getTrackBySearch = () =>{
-    return(axios.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?redirect_uri=http%253A%252F%252Fguardian.mashape.com%252Fcallback&q=eminem&index=25'))
+    return (axios.get('https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?redirect_uri=http%253A%252F%252Fguardian.mashape.com%252Fcallback&q=eminem&index=25'))
 } 
 const getTrackBySearchAll = (search) =>{
-    return(axios.get(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?redirect_uri=http%253A%252F%252Fguardian.mashape.com%252Fcallback&q=${search}&index=25`))
+    return (axios.get(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${search}`,{
+        headers: {
+            "x-rapidapi-host" : host,
+            "x-rapidapi-key" : key
+        }
+    }))
 } 
 
 const  getTrackByTrack = (id) => {

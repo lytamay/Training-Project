@@ -8,6 +8,7 @@ import DetailMusic from './pages/DetailMusic';
 import Singer from './pages/Singer';
 import InforPersonal from './pages/InforPersonal';
 import Search from './pages/Search';
+import SearchAll from './pages/SearchAll';
 
 function App() {
   return (
@@ -24,8 +25,14 @@ function App() {
         </Route>
         <Route path='/infor-personal' render={props => <InforPersonal {...props} />}>
         </Route>
-        <Route path='/tim-kiem-bai-hat/:name' component={Search} >
+        <Route path='/tim-kiem-bai-hat/:name' exact component={Search} />
+        {/*   <Route path='/tim-kiem-bai-hat/:name/all' exact component={SearchAll} /> */}
+        {/* <Route path='/tim-kiem-bai-hat/:name/bai hat' component={} >
         </Route>
+        <Route path='/tim-kiem-bai-hat/:name/nghe-si' component={Search} >
+        </Route> */}
+        {/* </Route> */}
+        
         <Route path='/thong-tin-bai-hat'>
           <Singer />
         </Route>

@@ -20,8 +20,10 @@ function Home(props) {
         .then( res => {
             const data = res.data.data
             setAlbumState(data)
+            console.log(typeof data);
         }).catch (err => console.log(err))
     },[])
+    console.log(albumState);
     return (
         <Layout>
             <Navbar/>
