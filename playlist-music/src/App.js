@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Login from './pages/Login';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -8,14 +8,22 @@ import DetailMusic from './pages/DetailMusic';
 import Singer from './pages/Singer';
 import InforPersonal from './pages/InforPersonal';
 import Search from './pages/Search';
-import SearchAll from './pages/SearchAll';
+import Playlist from './pages/Playlist';
+import { getTrackBySearch, getTrackByTrack} from './API/GetListmusicAPI';
+import { getListHotNewState } from './state/State';
+import PlayListMusic from './pages/PlayListMusic';
+
 
 function App() {
+  
   return (
     <Router>
       <Switch>
         <Route path='/login'>
           <Login />
+        </Route>
+        <Route path='/play-list'>
+          <Playlist/>
         </Route>
         <Route exact path="/" render={props => <Home {...props} />} />
         <Route path='/baihat'>
@@ -26,19 +34,8 @@ function App() {
         <Route path='/infor-personal' render={props => <InforPersonal {...props} />}>
         </Route>
         <Route path='/tim-kiem-bai-hat/:name' exact component={Search} />
-        {/*   <Route path='/tim-kiem-bai-hat/:name/all' exact component={SearchAll} /> */}
-        {/* <Route path='/tim-kiem-bai-hat/:name/bai hat' component={} >
-        </Route>
-        <Route path='/tim-kiem-bai-hat/:name/nghe-si' component={Search} >
-        </Route> */}
-        {/* </Route> */}
-        
-        <Route path='/thong-tin-bai-hat'>
-          <Singer />
-        </Route>
-        <Route path='/thong-tin-ca-si'>
-          <Singer />
-        </Route>
+        <Route path='/thong-tin-ca-si/:id' component={Singer}/>
+        <Route path='/chudeAlbum/:id' exact component={PlayListMusic} />
       </Switch>
     </Router>
   );

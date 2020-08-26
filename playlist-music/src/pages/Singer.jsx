@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Layout, Row, Col } from 'antd';
 import Navbar from '../components/Navbar';
 import InforOfSinger from '../components/InforOfSinger';
@@ -8,20 +8,33 @@ import TieuSu from '../components/TieuSu';
 import ListAlbum from '../components/chung/ListAlbum';
 import ListMusic from '../components/ListMusic'
 import OtherSinger from '../components/OtherSinger';
+import { getTrackByArtist } from '../API/GetListmusicAPI';
 
 function Singer(props) {
+    const id = props.match.params.id
+    const [inforArtistState, setInforArtistState] = useState([])
+    useEffect ( () =>{
+        getTrackByArtist(id).then(res => {
+            const data = res.data
+            setInforArtistState(data)
+        })
+    },[])
+    
     return (
         <Layout>
             <Navbar/>
-            <InforOfSinger/>
+            <InforOfSinger track ={inforArtistState}/>
             <Row>
                 <Col offset={1} span={17}>
                     <Theme color='#8B4513' fontzize='30px' theme='Tieu su'/>
+                    <h1>luong an bum</h1>
+                    <h1>fan</h1>
                     <TieuSu/>
+
                     <Theme color='#8B4513' fontzize='30px' theme='Album'/>
                     {/* <ListAlbum/> */}
                     <Theme color='#8B4513' fontzize='30px' theme='Bai hat'/>
-                    <ListMusic/>
+                    {/* <ListMusic/> */}
                 </Col>
                 <Col offset={1} span={5}>
                     <Theme color='#214545' fontzize='20px' theme='Cac Nghe Si Khac'/>

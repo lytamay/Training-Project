@@ -11,6 +11,7 @@ import 'antd/dist/antd.css';
 import Theme from '../components/chung/Theme';
 import Pages from '../components/chung/Pages'
 import Footer from '../components/Footer';
+import ListThemeAlbum from '../components/ListThemeAlbum';
 
 function Home(props) {
     const [albumState, setAlbumState] = useRecoilState(getAlbumApiState)
@@ -20,10 +21,8 @@ function Home(props) {
         .then( res => {
             const data = res.data.data
             setAlbumState(data)
-            console.log(typeof data);
         }).catch (err => console.log(err))
     },[])
-    console.log(albumState);
     return (
         <Layout>
             <Navbar/>
@@ -31,11 +30,13 @@ function Home(props) {
                 <Col className="group-content-left" offset={1} span={17}>
                     <Slidebar album={albumState}/>
                     <Theme theme='Nghe gi hom nay'/>
+                    <ListThemeAlbum/>
                     <ListAlbum span='4' album={albumState}/>
+                    <ListThemeAlbum/>
                     <Theme theme='Moi phat hanh'/>
-                    <ListAlbum span='4' album={albumState}/>
+                    {/* <ListAlbum span='4' album={albumState}/> */}
                     <Theme theme='Nhac hot nhat'/>
-                    <ListAlbum span='4' album={albumState}/>
+                    {/* <ListAlbum span='4' album={albumState}/> */}
                 </Col>
                 <Col className ="group-content-right" offset={1} span={5}>
                     <p>sasas</p>

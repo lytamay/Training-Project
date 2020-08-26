@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import {UserOutlined, VideoCameraOutlined, UploadOutlined} from '@ant-design/icons';
 import Faverist from './Faverist';
 import Login from './Login';
+import UploadTrack from '../components/UploadTrack';
 
 const { Sider, Content } = Layout;
 
@@ -30,7 +31,7 @@ function InforPersonal(props) {
                         <Menu.Item key="1" icon={<UserOutlined />}>
                             Nguyen ngoc
                         </Menu.Item>
-                        <Menu.Item key="2" onClick={handelShowFaveristState} icon={<VideoCameraOutlined />}>
+                        <Menu.Item key="2" onClick={handelShowFaveristState} active icon={<VideoCameraOutlined />}>
                             Danh sach yeu thich
                         </Menu.Item>
                         <Menu.Item key="3" onClick={handelShowUploadState} icon={<UploadOutlined />}>
@@ -41,7 +42,7 @@ function InforPersonal(props) {
                 <Layout className="site-layout">
                 <Content className="site-layout-background" style={{margin: '24px 16px', padding: 24, minHeight: 280,}}>
                     {showFaveristState && <Faverist/>}
-                    {showUploadState && <Login/>}
+                    {showUploadState && <UploadTrack/>}
                 </Content>
             </Layout>
         </Layout>

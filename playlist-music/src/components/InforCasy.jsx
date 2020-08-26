@@ -9,7 +9,7 @@ function InforCasy(props) {
         return null
     }
     const {picture_xl} = track.artist
-
+    const link = `/thong-tin-ca-si/${track.artist.id}`
     return (
         <Row className='infor-ca-sy'>
             <Col span={props.sizeanh}>
@@ -20,7 +20,7 @@ function InforCasy(props) {
                     <a href="/thong-tin-bai-hat">{track.title}</a>
                 </h3>
                 <span>
-                    <a style={{fontSize: props.fontSizeTenCasy}} href="/thong-tin-ca-si">{track.artist.name} </a>
+                    <a style={{fontSize: props.fontSizeTenCasy}} href={link}>{track.artist.name} </a>
                 </span>
             </Col>
         </Row>

@@ -4,9 +4,10 @@ import { Row } from 'antd';
 
 function ListMusic(props) {
     const track= props.track
+   
     return (
         <Row>
-            {track.map((item, index) => <MusicItem key={item.id} track={item} />)}
+            {track.map((item) => <MusicItem key={item.id} track={item} />)}
         </Row>
     );
 }

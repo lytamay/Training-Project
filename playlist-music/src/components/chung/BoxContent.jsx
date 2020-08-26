@@ -6,11 +6,13 @@ function BoxContent(props) {
     const boxText = props.boxText
     const boxColor = props.boxColor
     const colorText = props.colorText
+    const fontSize = props.fontSize
+    const margin = props.margin
     return (
         <div style={{textAlign:'center',justifyContent: 'center', alignContent:'center', width: boxWidth, 
         height: boxHeight, background: boxColor, borderRadius: '5px', display: 'flex', marginBottom: '12px',
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}>
-            <h1 style={{color: colorText, margin: '10%'}}>{boxText}</h1>
+            <h1 style={{color: colorText,fontSize: fontSize, textAlign:'center', margin:margin}}>{boxText}</h1>
         </div>
     );
 }

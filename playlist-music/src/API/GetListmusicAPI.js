@@ -24,8 +24,8 @@ const  getTrackByTrack = (id) => {
     })
 }
 
-const getTrackByArtist = () => {
-    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/artist/67239342", {
+const getTrackByArtist = (id) => {
+    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/artist/" + id, {
         headers: {
             "x-rapidapi-host" : host,
             "x-rapidapi-key" : key
@@ -33,8 +33,8 @@ const getTrackByArtist = () => {
     })
 }
 
-const getTrackByAlbum = () => {
-    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/album/119606", {
+const getTrackByAlbum = (id) => {
+    return axios.get("https://deezerdevs-deezer.p.rapidapi.com/album/" + id, {
         headers: {
             "x-rapidapi-host" : host,
             "x-rapidapi-key" : key
@@ -96,8 +96,16 @@ const getTrackByComment= () => {
     })
 }
 
+const getAutoComplete= () => {
+    return axios.get("https://shazam.p.rapidapi.com/search?locale=en-US&offset=0&limit=5&term=kiss%20the%20rain", {
+        headers: {
+            "x-rapidapi-host": "shazam.p.rapidapi.com",
+            "x-rapidapi-key": "9fd6c939aamsh5f72768d77a1559p1dd2d7jsnf23f80d8315a"
+        }
+    })
+}
 
 export {getTrackBySearch,  getTrackByTrack, getTrackByTrackListAlbum,getTrackByComment,
     getTrackByArtist, getTrackByAlbum, getTrackByEditorial,getTrackBySearchAll,
-    getTrackByPlaylist,getTrackByRadio, getTrackByInfos };
+    getTrackByPlaylist,getTrackByRadio, getTrackByInfos, getAutoComplete };
 

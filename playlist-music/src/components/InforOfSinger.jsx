@@ -3,19 +3,20 @@ import { Row, Col } from 'antd';
 import '../css/InforOfSinger.css'
 
 function InforOfSinger(props) {
+    const track = props.track
     return (
-        <Row className='box-infor-singer'>
+        <Row className='box-infor-singer' >
             <Col span={6} offset={1}>
                 <div>
-                    <img style={{width: '100px', height: '100px', borderRadius: '100px  '}} src="https://avatar-nct.nixcdn.com/singer/avatar/2017/10/18/f/f/1/d/1508320622965.jpg" alt=""/>
-                </div>   
-                <h2> Ten ca sy</h2>
-                <h4>Ngay sinh: </h4>
-                <h4>Gioi tinh: </h4>
-                <h4>Quoc Gia: </h4>    
+                    <img style={{ width: '100px', height: '100px', borderRadius: '100px  ' }} src={track.picture_xl} alt={track.name} />
+                </div>
+                <h2> {track.name}</h2>
+                <h5>Ngay sinh: khong co</h5>
+                <h5>Gioi tinh: khong co </h5>
+                <h5>Quoc Gia: khong co </h5>
             </Col>
             <Col span={16}>
-                <img style={{width:'100%', height: '300px'}} src="https://avatar-nct.nixcdn.com/singer/avatar/2017/10/18/f/f/1/d/1508320622965.jpg" alt=""/>
+                <img style={{ width: '100%', height: '300px' }} src={track.picture_xl} alt={track.name} />
             </Col>
             <Col span={1}>
             </Col>

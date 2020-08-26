@@ -50,7 +50,7 @@ const getVisibleLogoutState = ({
     default: false
 })
 
-const getSearchAllState = atom({
+const getSearchAlbumState = atom({
     key: 'getSearchState',
     default: []
 })
@@ -64,6 +64,16 @@ const getSearchArtistState= atom({
     key:'getSearchArtistState',
     default: []
 })
-export {logInState, getAlbumApiState, gettrackState,getLoginState,getSearchArtistState,
-     getVisibleState,getSearchAllState,getVisibleLogoutState,getSearchTrackState,
+
+const getListHotNewState= atom({
+    key:'getSearchArtistState',
+    default: []
+})
+
+const getRunMusic = atom({
+    key: 'getRunMusic',
+    default : []
+})
+export {logInState, getAlbumApiState, gettrackState,getLoginState,getSearchArtistState,getRunMusic ,
+     getVisibleState,getSearchAlbumState,getVisibleLogoutState,getSearchTrackState,getListHotNewState,
      getartistState, getTrackListAlbumState, getTrackListArtistState, inforPersonState};

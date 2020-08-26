@@ -6,8 +6,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { Menu, Dropdown } from 'antd';
 import FormLogin from './FormLogin';
 import { useRecoilState } from 'recoil';
-import { logInState, getLoginState, getVisibleState,
-  getVisibleLogoutState, inforPersonState, getSearchState } from '../state/State';
+import { getLoginState, getVisibleState} from '../state/State';
 import Search from 'antd/lib/input/Search';
 import FormLogout from './FormLogout';
 
@@ -61,7 +60,7 @@ function Navbar(props) {
     <div className = 'navbar'>
       <Link to="/">Home</Link>
       <Link to="/baihat">Bai hat</Link>
-      <Link to="/playlist">Playlist</Link>
+      <Link to="/play-list">Playlist</Link>
       <input value={valueInput} type="text" placeholder="search" onKeyDown={_handleKeyDown} onChange={handelChangeValue}/>
       <Dropdown overlay={login ? menu:menu1}>
         <Avatar style={{float:'right', marginRight: '20px', right: '0px'}} icon={<UserOutlined />} />
