@@ -33,7 +33,9 @@ function Singer(props) {
                     <TieuSu />
                     <Theme color='#8B4513' fontzize='30px' theme='Album' />
                     {/* <ListAlbum/> */}
+                    <p>Danh sach album trong</p>
                     <Theme color='#8B4513' fontzize='30px' theme='Bai hat' />
+                    <p>Danh sach bai hat trong</p>
                     {/* <ListMusic/> */}
                 </Col>
                 <Col offset={1} span={5}>

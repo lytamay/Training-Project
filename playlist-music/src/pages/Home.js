@@ -39,21 +39,21 @@ function Home(props) {
                     <Theme theme='Nghe gi hom nay' />
                     
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe id='99719862' span={6} />
-                        <AmNhacTheoChuDe id='168524752' span={6} />
-                        <AmNhacTheoChuDe id='127247792' span={6} />
-                        <AmNhacTheoChuDe id='145022202' span={6} />
+                        <AmNhacTheoChuDe id='99719862' span={6} size='15px' />
+                        <AmNhacTheoChuDe id='168524752' span={6} size='15px'/>
+                        <AmNhacTheoChuDe id='127247792' span={6} size='15px'/>
+                        <AmNhacTheoChuDe id='145022202' span={6} size='15px'/>
                     </Row>
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe key='145421942' id='145421942' span={4} />
-                        <AmNhacTheoChuDe key='45754692' id='45754692' span={4} />
-                        <AmNhacTheoChuDe key='157841452' id='157841452' span={4} />
-                        <AmNhacTheoChuDe key='131874432' id='131874432' span={4} />
-                        <AmNhacTheoChuDe key='135491242' id='135491242' span={4} />
-                        <AmNhacTheoChuDe key='168999282' id='168999282' span={4} />
+                        <AmNhacTheoChuDe key='145421942' id='145421942' span={4} size='15px' />
+                        <AmNhacTheoChuDe key='45754692' id='45754692' span={4} size='15px' />
+                        <AmNhacTheoChuDe key='157841452' id='157841452' span={4} size='15px'/>
+                        <AmNhacTheoChuDe key='131874432' id='131874432' span={4} size='15px'/>
+                        <AmNhacTheoChuDe key='135491242' id='135491242' span={4} size='15px'/>
+                        <AmNhacTheoChuDe key='168999282' id='168999282' span={4} size='15px'/>
                     </Row>
 
-                    <AmNhacTheoChuDe id='148314202' />
+                    {/* <AmNhacTheoChuDe id='148314202' /> */}
                     {/* <ListAlbum span='4' album={albumState} /> */}
                     {/* <Row gutter={10}>
                        
@@ -64,15 +64,15 @@ function Home(props) {
                     {/* <ListThemeAlbum/> */}
                     <Theme theme='Nhac quoc te' />
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe id=' 168871152' span={6} />
-                        <AmNhacTheoChuDe id=' 1610436' span={6} />
-                        <AmNhacTheoChuDe id='94125292' span={6} />
-                        <AmNhacTheoChuDe id='44881061' span={6} />
+                        <AmNhacTheoChuDe id=' 168871152' span={6}size='15px' />
+                        <AmNhacTheoChuDe id=' 1610436' span={6} size='15px'/>
+                        <AmNhacTheoChuDe id='94125292' span={6} size='15px'/>
+                        <AmNhacTheoChuDe id='44881061' span={6} size='15px'/>
                     </Row>
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe id='15579230' span={8} />
-                        <AmNhacTheoChuDe id='7787471' span={8} />
-                        <AmNhacTheoChuDe id='110044' span={8} />
+                        <AmNhacTheoChuDe id='15579230' span={8} size='18px'/>
+                        <AmNhacTheoChuDe id='7787471' span={8} size='18px'/>
+                        <AmNhacTheoChuDe id='110044' span={8}size='18px'/>
                     </Row>
                     {/* <ListAlbum span='4' album={albumState}/> */}
                     <a href='/MV-hot'><Theme theme='MV hot>' /></a>
@@ -114,54 +114,54 @@ function Home(props) {
                     </Row>
                     <Theme theme='Nha Tre' />
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe key='157110312' id='157110312' span={6} />
-                        <AmNhacTheoChuDe key='63688512' id='63688512' span={6} />
-                        <AmNhacTheoChuDe key='9116754002' id='116754002' span={6} />
-                        <AmNhacTheoChuDe key=' 117634072' id=' 117634072' span={6} />
+                        <AmNhacTheoChuDe key='157110312' id='157110312' span={6} size='15px' />
+                        <AmNhacTheoChuDe key='63688512' id='63688512' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key='9116754002' id='116754002' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key=' 117634072' id=' 117634072' span={6} size='15px'/>
                     </Row>
                     <Theme theme='Nha Thieu Nhi' />
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe key=' 169476242' id=' 169476242' span={6} />
-                        <AmNhacTheoChuDe key='109475942' id='109475942' span={6} />
-                        <AmNhacTheoChuDe key='120729192' id='120729192' span={6} />
-                        <AmNhacTheoChuDe key='11614476' id='11614476' span={6} />
+                        <AmNhacTheoChuDe key=' 169476242' id=' 169476242' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key='109475942' id='109475942' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key='120729192' id='120729192' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key='11614476' id='11614476' span={6} size='15px'/>
                     </Row>
                     <Theme theme='Nha Han' />
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe key='47902552' id='47902552' span={6} />
-                        <AmNhacTheoChuDe key='159769722' id='159769722' span={6} />
-                        <AmNhacTheoChuDe key=' 92735082' id=' 92735082' span={6} />
-                        <AmNhacTheoChuDe key='47902522' id='47902522' span={6} />
+                        <AmNhacTheoChuDe key='47902552' id='47902552' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key='159769722' id='159769722' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key=' 92735082' id=' 92735082' span={6} size='15px' />
+                        <AmNhacTheoChuDe key='47902522' id='47902522' span={6} size='15px'/>
                     </Row>
                     <Theme theme='Nhac Au My' />
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe key='118976302' id='118976302' span={6} />
-                        <AmNhacTheoChuDe key=' 53401272' id=' 53401272' span={6} />
-                        <AmNhacTheoChuDe key=' 166325982' id=' 166325982' span={6} />
-                        <AmNhacTheoChuDe key=' 42543161' id=' 42543161' span={6} />
+                        <AmNhacTheoChuDe key='118976302' id='118976302' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key=' 53401272' id=' 53401272' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key=' 166325982' id=' 166325982' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key=' 42543161' id=' 42543161' span={6}size='15px'/>
                     </Row>
                     <Theme theme='Nhac Trung Quoc' />
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe key='145421942' id='145421942' span={6} />
-                        <AmNhacTheoChuDe key='144823282' id='144823282' span={6} />
-                        <AmNhacTheoChuDe key='99719862' id='99719862' span={6} />
-                        <AmNhacTheoChuDe key='114203712' id='114203712' span={6} />
+                        <AmNhacTheoChuDe key='145421942' id='145421942' span={6} size='15px' />
+                        <AmNhacTheoChuDe key='144823282' id='144823282' span={6} size='15px' />
+                        <AmNhacTheoChuDe key='99719862' id='99719862' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key='114203712' id='114203712' span={6} size='15px'/>
                     </Row>
                     <Theme theme='Nhac nhat' />
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe key='112552372' id='112552372' span={6} />
-                        <AmNhacTheoChuDe key='160615152' id='160615152' span={6} />
-                        <AmNhacTheoChuDe key=' 98020932' id='98020932' span={6} />
-                        <AmNhacTheoChuDe key='184564232' id='84564232' span={6} />
+                        <AmNhacTheoChuDe key='112552372' id='112552372' span={6}size='15px' />
+                        <AmNhacTheoChuDe key='160615152' id='160615152' span={6} size='15px' />
+                        <AmNhacTheoChuDe key=' 98020932' id='98020932' span={6} size='15px' />
+                        <AmNhacTheoChuDe key='184564232' id='84564232' span={6} size='15px' />
                     </Row>
 
 
                     <Theme theme='Ca si hot' />
                     <Row gutter={[16, 16]}>
-                        <AmNhacTheoChuDe key='106837762' id='106837762' span={6} />
-                        <AmNhacTheoChuDe key='150642612' id='150642612' span={6} />
-                        <AmNhacTheoChuDe key=' 70959742' id=' 70959742' span={6} />
-                        <AmNhacTheoChuDe key='10269046' id='10269046' span={6} />
+                        <AmNhacTheoChuDe key='106837762' id='106837762' span={6}size='15px' />
+                        <AmNhacTheoChuDe key='150642612' id='150642612' span={6}size='15px' />
+                        <AmNhacTheoChuDe key=' 70959742' id=' 70959742' span={6} size='15px'/>
+                        <AmNhacTheoChuDe key='10269046' id='10269046' span={6} size='15px'/>
                     </Row>
                     <Theme theme='Kham pha' />
                     <Carousel autoplay>
