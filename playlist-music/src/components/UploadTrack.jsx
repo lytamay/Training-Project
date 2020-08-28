@@ -15,7 +15,7 @@ function UploadTrack(props) {
     // }
     return (
         <Layout>
-            <BoxContent  boxWidth ='100%' boxHeight = '300px' boxText='Nhac Tai Len' boxColor='#51258f' colorText='white'/>
+            <BoxContent  boxWidth ='100%' boxHeight = '300px' boxText='Nhac Tai Len Trong'  boxColor='#51258f' colorText='white' fontSize='50px' margin='100px'/>
             {/* <input type="file" name='upload' onChange={handChangeUpload}/> */}
         </Layout>
     );

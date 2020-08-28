@@ -27,7 +27,7 @@ function PlayListMusic(props) {
     const onHandelChange = (track) => {
         setHandelChange(track)
     }
-
+    console.log();
     return (
         <Layout>
             <Navbar />

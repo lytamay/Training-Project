@@ -4,33 +4,21 @@ import ListAlbum from '../components/chung/ListAlbum';
 import BoxContent from '../components/chung/BoxContent';
 import { useRecoilState } from 'recoil';
 import { getSearchTrackState } from '../state/State';
+import ListMusic from '../components/ListMusic';
 
 function SearchTrack(props) {
-    const search = props.search
-
-    // const [searchTrackState, setSearchTrackState] = useRecoilState(getSearchTrackState)
+    const track = props.track
     const [searchTrackState, setSearchTrackState] = useState([])
 
-    // if(search.length !==0){
-    //     // for(let i = 0 ;i< search.length; i++){
-    //     //     if(i%2){
-    //     //         // let tam =[...searchTrackState]
-    //     //         // tam.push(search[i])
-    //     //         // setSearchTrackState(tam)
-
-    //     //     }
-    //     // }
-    // }
-
     const show = () =>{
-        if(search.length === 0) return <BoxContent  boxWidth ='100%' boxHeight = '300px' boxText='Khong co du lieu' boxColor='#51258f' colorText='white'/>
+        if(track.length === 0) return <BoxContent  boxWidth ='100%' boxHeight = '300px' boxText='Khong co du lieu' boxColor='#51258f' colorText='white'/>
         else {
-            return <ListAlbum span='8' album={search}/>
+            return <ListMusic track={track}/>
         }
     }
     return (
         <Layout>
-            <h1>search Track</h1>
+            <BoxContent  boxWidth ='100%' boxHeight = '70px' boxText='Tat ca cac bai hat duoc tim thay' boxColor='#51258f' colorText='white' fontSize='30px' margin='15px'/>
             {show()}
         </Layout>
     );

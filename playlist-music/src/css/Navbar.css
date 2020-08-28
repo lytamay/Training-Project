@@ -3,16 +3,19 @@
     padding: 12px;
     font-weight: 14px;
     border-bottom:5px solid white;
-    background:#138585;
+    background:#111d2c;
     align-content: center;
     align-items: center;
-    
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 
 .navbar a{
-    margin: 20px;
+    /* margin: 20px; */
     outline: none;
     color: white !important;
+    font-size: 20px;
 }
 
 input{
@@ -20,4 +23,9 @@ input{
     padding: 0.8vh;
     outline: none;
     border: none;
+}
+.Log-In-Form {
+    background: #111d2c !important;
+    width: 180px;
+    height: 100px;
 }

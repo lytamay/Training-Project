@@ -1,19 +1,26 @@
-import React, {  useState } from 'react';
+import React, {  useState, useEffect } from 'react';
 import { Card, Col, Button } from 'antd';
 import { PlayCircleOutlined } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
+import { getTrackByAlbum } from '../API/GetListmusicAPI';
 
-function ChudeAlbum(props) {
-    const title = props.title
+function AmNhacTheoChuDe(props) {
     const id = props.id
-    const src = props.src
+    const size = props.size
     const span = props.span
     const history = useHistory()
     const [playState , setPlayState] = useState(false)
+    const [track , setTrack] = useState([])
     const [imgWith , setimgWith] = useState('100%')
+    useEffect( ()=>{
+        getTrackByAlbum(id).then( (res)=>{
+            const data = res.data
+            setTrack(data)
+        })
+    }, [])
     const handelMouseOver = () =>{
         setPlayState(true)
-        setimgWith('120%')
+        setimgWith('90%')
        
     }
     const handelMouseOut = () =>{
@@ -32,17 +39,17 @@ function ChudeAlbum(props) {
                 style={{ borderRadius: '10px'}}
                 cover={
                     <img
-                        style={{ borderRadius: '10px' , width : imgWith }}
+                        style={{ borderRadius: '10px' , position:'relative', width : imgWith }}
                         alt="example"
-                        src={src}
+                        src={track.cover_xl}
                     />
                 }
             >
-                { playState &&<Button style={{position: 'absolute', top: '60px', alignContent: 'center', alignItems: 'center', marginLeft: '38%' }} icon={ <PlayCircleOutlined />}></Button>}
-                <h4>{title}</h4>
+                { playState &&<Button style={{position: 'absolute', top: '36%', alignContent: 'center', alignItems: 'center', marginLeft: '38%' }} icon={ <PlayCircleOutlined />}></Button>}
+                <h4 style={{fontStyle: 'italic' , fontSize: size}}>{track.title}</h4>
             </Card>
         </Col>
     );
 }
 
-export default ChudeAlbum;
+export default AmNhacTheoChuDe;

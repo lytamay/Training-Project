@@ -7,7 +7,6 @@ import {handelAddListFaverist} from '../HandelAddListFaverist'
 
 function MusicItem(props) {
     const track=props.track
-    const [activeState, setActiveState] = useState(false)
     const [hoverState , setHoverState] = useState(false)
     if(!track){
         return null

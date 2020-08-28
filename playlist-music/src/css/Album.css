@@ -37,7 +37,7 @@ img{
     width: 100%;
 }
 
-.cart, a{
+.cart-music div a{
     outline: 0px;
     font-size: 14px;
     color: black !important;

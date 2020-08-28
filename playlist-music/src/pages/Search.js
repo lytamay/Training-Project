@@ -10,9 +10,10 @@ import '../css/Search.css'
 import { useRecoilState } from 'recoil';
 import { getSearchAlbumState, getSearchTrackState, getSearchArtistState } from '../state/State';
 import { getTrackBySearchAll } from '../API/GetListmusicAPI';
-
+import SearchMV from './SearchMV';
+import SearchArtist from './SearchArtist';
+import BoxContent from '../components/chung/BoxContent';
 const { Sider, Content } = Layout;
-
 function Search(props) {
     const search = props.match.params.name
     let { url } = useRouteMatch();
@@ -33,7 +34,7 @@ function Search(props) {
                 if (data[i].artist.name.match(/[search]/g) !== null) {
                     const check = artist.find(artist => artist.name === data[i].artist.name)
                     if (!check) {
-                        artist.push(data[i].artist)
+                        artist.push(data[i])
                     }
                 }
                 if (data[i].album.title.match(/[search]/g) !== null) {
@@ -46,30 +47,32 @@ function Search(props) {
             setSearchTrackState(track)
             setSearchArtistState(artist)
             setSearchAlbumState(album)
-            // setSearchAll(data)
         }).catch(err => 'khong co du lieu')
     }, [search])
     const showSearch = (query) => {
         if (query === '?all' || query === '') return <SearchAll track={searchTrackState} album={searchAlbumState} artist={searchArtistState} />
         if (query === '?bai-hat') return <SearchTrack track={searchTrackState}/>
+        if (query === '?mv') return <SearchMV album={searchAlbumState}/>
+        if (query === '?nghe-si') return <SearchArtist artist={searchArtistState}/>
     }
     return (
         <Layout>
             <Navbar />
+            <BoxContent boxWidth='100%' boxHeight='106px' boxText='Khong co du lieu' boxColor='#51258f' colorText='white'  fontSize='40px' margin='100px'/>
             <Layout>
                 <Sider trigger={null} collapsible>
                     <div className="logo" />
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-                        <Menu.Item key="1" icon={<UserOutlined />} active>
+                        <Menu.Item key="1"  active>
                             <Link to={`${url}?all`}>Tat Ca </Link>
                         </Menu.Item>
-                        <Menu.Item key="2" icon={<VideoCameraOutlined />}>
+                        <Menu.Item key="2">
                             <Link to={`${url}?bai-hat`}>Bai Hat </Link>
                         </Menu.Item>
-                        <Menu.Item key="3" icon={<UploadOutlined />}>
+                        <Menu.Item key="3">
                             <Link to={`${url}?nghe-si`}>Nghe si</Link>
                         </Menu.Item>
-                        <Menu.Item key="4" icon={<UploadOutlined />}>
+                        <Menu.Item key="4" >
                             <Link to={`${url}?mv`}> MV </Link>
                         </Menu.Item>
                     </Menu>

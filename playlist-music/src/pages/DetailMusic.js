@@ -32,12 +32,12 @@ function DetailMusic(props) {
     const ranh = `Ranh:${trackState.rank}`
     const trackListAlbum = trackState.artist.tracklist
     const trackArtistAlbum = trackState.album.tracklist
-    
+    console.log(trackState);
     return (
         <Layout>
             <Navbar/>
             <Row>
-                <Col offset={1} span={17}>
+                <Col offset={3} span={18}>
                     <Row>
                         <Col span={18}>
                         <   Theme color='Black' fontzize='30px' theme={trackState.title} />
@@ -58,8 +58,8 @@ function DetailMusic(props) {
                     <Theme color='Black' fontzize='30px' theme='Bai hat cua ca si' />
                     {/* <BoxMusic trackList={trackListAlbum}/> */}
                 </Col>
-                <Col offset={1} span={5}>
-                    <p>asas</p>
+                <Col span={3}>
+                   
                 </Col>
             </Row>
             <Footer/>
