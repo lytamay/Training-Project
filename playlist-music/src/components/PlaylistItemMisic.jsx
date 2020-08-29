@@ -5,12 +5,12 @@ import { CaretRightOutlined, HeartFilled} from '@ant-design/icons';
 function PlaylistItemMisic(props) {
     const number = props.number + 1
     const track = props.track
-    const [backgroundState , setBackgroundState] = useState('#1a1325')
+    const [backgroundState , setBackgroundState] = useState('#301c4d')
     const handelMouseOver =() =>{
         setBackgroundState('#ab7ae0')
     }
     const handelMouseOut =() =>{
-        setBackgroundState('#1a1325 ')
+        setBackgroundState('#301c4d')
     }    
     const handelRun = () =>{
         setBackgroundState('#51258f')
@@ -31,7 +31,7 @@ function PlaylistItemMisic(props) {
         localStorage.setItem('faverist',JSON.stringify(music))
     }
     let music = JSON.parse(localStorage.getItem('faverist'))|| []
-    const isFaverist = music.findIndex(value => value.id === track.id) === -1 ? '#8bbb11' : 'red' 
+    const isFaverist = music.findIndex(value => value.id === track.id) === -1 ? 'gray1' : 'red' 
     return (
         <Row justify="space-around" onMouseOver={handelMouseOver} onMouseOut={handelMouseOut} style={{background: backgroundState, color: 'white' , alignContent: 'center', alignItems: 'center', 
         paddingTop: '12px', paddingBottom:'12px', justifyContent:'center', borderBottom:'1px solid white', borderRadius:'5px'}}>

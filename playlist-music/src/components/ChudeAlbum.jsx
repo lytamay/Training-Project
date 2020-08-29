@@ -38,7 +38,7 @@ function ChudeAlbum(props) {
                     />
                 }
             >
-                { playState &&<Button style={{position: 'absolute', top: '60px', alignContent: 'center', alignItems: 'center', marginLeft: '38%' }} icon={ <PlayCircleOutlined />}></Button>}
+                { playState &&<Button style={{position: 'absolute', top: '37%', alignContent: 'center', alignItems: 'center', marginLeft: '38%' }} icon={ <PlayCircleOutlined />}></Button>}
                 <h4>{title}</h4>
             </Card>
         </Col>
